@@ -11,6 +11,20 @@
         rel="stylesheet">
     <link rel="stylesheet" href="wtvstyle.css" />
     <style>
+        @media (max-width: 900px) {
+            #hamburger {
+                display: flex !important;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .nav-links.mobile-open {
+                display: flex !important;
+            }
+        }
+    <style>
         /* Centralized Container for a focused look */
         .contact-page-container {
             max-width: 900px;
@@ -213,25 +227,9 @@
             </div>
         </div>
         <div class="nav-right">
-            <a href="dashboard.html"><button class="login-btn">Dashboard</button></a>
+            <a href="dashboard.html" class="login-btn">Dashboard</a>
         </div>
     </nav>
-
-    <style>
-        @media (max-width: 900px) {
-            #hamburger {
-                display: flex !important;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .nav-links.mobile-open {
-                display: flex !important;
-            }
-        }
-    </style>
 
     <!-- HERO SECTION -->
     <section class="contact-hero">
@@ -345,7 +343,7 @@
 
                 <div class="contact-detail-item">
                     <strong>Office Hours</strong>
-                    <p>Mon — Fri, 9am — 5pm EST<br>Typical response: < 24 hrs</p>
+                    <p>Mon — Fri, 9am — 5pm EST<br>Typical response: &lt; 24 hrs</p>
                 </div>
 
                 <div class="contact-detail-item">
@@ -357,7 +355,7 @@
             <!-- Form -->
             <section class="contact-form-section" id="contact-form">
                 <div class="contact-form-card">
-                    <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 1.2rem;">Send a Message</h3>
+                    <h2 style="margin-top: 0; margin-bottom: 20px; font-size: 1.2rem;">Send a Message</h2>
                     <form class="contact-form">
                         <div class="form-group">
                             <label>Full Name<span class="required-star">*</span></label>

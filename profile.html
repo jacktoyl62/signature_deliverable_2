@@ -43,9 +43,7 @@
     </div>
 
     <div class="nav-right">
-      <a href="dashboard.html">
-        <button class="login-btn">Login</button>
-      </a>
+      <a href="dashboard.html" class="login-btn">Login</a>
     </div>
   </nav>
 
@@ -232,7 +230,7 @@
           const reader = new FileReader();
           reader.onload = (event) => {
             const preview = document.getElementById('avatarPreview');
-            preview.innerHTML = `<img src="${event.target.result}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">`;
+            preview.innerHTML = `<img src="${event.target.result}" alt="Selected profile photo preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;\">`;
           };
           reader.readAsDataURL(file);
         }

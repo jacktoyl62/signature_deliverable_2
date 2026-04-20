@@ -3,6 +3,10 @@
         "/^cd \"c:\\\\Users\\\\jackt\\\\OneDrive\\\\Desktop\\\\NEU 25-26\\\\ITC2400\\\\signature_deliverable_2\" ; git add \\. ; git commit -m \"Update hero sections, add services page, fix mobile navigation and button styling\" ; git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"c:\\\\Users\\\\jackt\\\\OneDrive\\\\Desktop\\\\NEU 25-26\\\\ITC2400\\\\signature_deliverable_3\" ; git add -A ; git commit -m \"Fix HTML validation issues: remove buttons from anchor tags, fix heading hierarchy, add alt text, move style tag, escape special characters, restructure service headers\"$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
