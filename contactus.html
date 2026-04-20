@@ -146,7 +146,8 @@
             font-size: 0.9rem;
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #ddd;
@@ -181,6 +182,7 @@
             .contact-methods-grid {
                 grid-template-columns: 1fr;
             }
+
             .faq-question {
                 font-size: 0.95rem;
             }
@@ -219,7 +221,7 @@
     </section>
 
     <div class="contact-page-container">
-        
+
         <!-- SECTION 1: FAQ ACCORDION (TOP) -->
         <section class="faq-header">
             <h2>Frequently Asked Questions</h2>
@@ -232,7 +234,8 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>We The Village is a local-first community platform designed to help neighbors build real-world connections, share professional skills, and launch local initiatives together.</p>
+                    <p>We The Village is a local-first community platform designed to help neighbors build real-world
+                        connections, share professional skills, and launch local initiatives together.</p>
                 </div>
             </div>
 
@@ -242,7 +245,8 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Joining the community and creating a profile is 100% free. Some partner workshops or large-scale events may have specific registration costs which are clearly marked.</p>
+                    <p>Joining the community and creating a profile is 100% free. Some partner workshops or large-scale
+                        events may have specific registration costs which are clearly marked.</p>
                 </div>
             </div>
 
@@ -252,7 +256,8 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Once logged in, you can visit the "Connect" page to find community leaders in your area and message them directly through your dashboard.</p>
+                    <p>Once logged in, you can visit the "Connect" page to find community leaders in your area and
+                        message them directly through your dashboard.</p>
                 </div>
             </div>
 
@@ -262,7 +267,9 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Getting started is easy! Sign up for a free account, complete your profile with your interests and skills, and begin exploring local connections, events, and community initiatives in your area.</p>
+                    <p>Getting started is easy! Sign up for a free account, complete your profile with your interests
+                        and skills, and begin exploring local connections, events, and community initiatives in your
+                        area.</p>
                 </div>
             </div>
 
@@ -272,7 +279,8 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Visit the "Connect" section to browse upcoming events, meetups, and initiatives happening in your local community. You can filter by interest, date, or location to find what matters to you.</p>
+                    <p>Visit the "Connect" section to browse upcoming events, meetups, and initiatives happening in your
+                        local community. You can filter by interest, date, or location to find what matters to you.</p>
                 </div>
             </div>
 
@@ -282,7 +290,9 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Absolutely! You can add your skills to your profile and volunteer to help others or teach workshops. Visit your profile settings to highlight what you're good at and willing to share.</p>
+                    <p>Absolutely! You can add your skills to your profile and volunteer to help others or teach
+                        workshops. Visit your profile settings to highlight what you're good at and willing to share.
+                    </p>
                 </div>
             </div>
 
@@ -292,7 +302,8 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>We The Village is currently web-based and fully responsive on mobile devices. Native apps for iOS and Android are in development—sign up for updates on our home page.</p>
+                    <p>We The Village is currently web-based and fully responsive on mobile devices. Native apps for iOS
+                        and Android are in development—sign up for updates on our home page.</p>
                 </div>
             </div>
         </div>
@@ -301,14 +312,15 @@
 
         <!-- SECTION 2: CONTACT INFO & FORM (BOTTOM) -->
         <div class="contact-methods-grid">
-            
+
             <!-- Direct Info -->
             <aside class="support-info">
                 <h3>Direct Support</h3>
-                
+
                 <div class="contact-detail-item">
                     <strong>Email Us</strong>
-                    <p><a href="mailto:hello@thevillage.com" style="color: var(--primary); text-decoration: none;">hello@thevillage.com</a></p>
+                    <p><a href="mailto:hello@thevillage.com"
+                            style="color: var(--primary); text-decoration: none;">hello@thevillage.com</a></p>
                 </div>
 
                 <div class="contact-detail-item">
@@ -355,7 +367,7 @@
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const item = button.parentElement;
-                
+
                 // Close other items
                 document.querySelectorAll('.faq-item').forEach(otherItem => {
                     if (otherItem !== item) otherItem.classList.remove('active');
@@ -370,4 +382,5 @@
         });
     </script>
 </body>
+
 </html>
