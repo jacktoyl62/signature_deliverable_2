@@ -29,8 +29,7 @@
             <a href="build.html">Build</a>
             <div class="nav-dropdown">
                 <a href="aboutus.html">About</a>
-                <div class="dropdown-content">
-                    <a href="testimonials.html" class="active">Testimonials</a>
+                <div class="dropdown-content">                    <a href="services.html">Services</a>                    <a href="testimonials.html" class="active">Testimonials</a>
                     <a href="contactus.html">Contact Us</a>
                 </div>
             </div>
@@ -208,6 +207,7 @@
         if (hamburger) {
             hamburger.addEventListener('click', () => {
                 navLinks.classList.toggle('mobile-open');
+                hamburger.classList.toggle('active');
             });
         }
     </script>

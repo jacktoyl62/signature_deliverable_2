@@ -32,6 +32,7 @@
             <div class="nav-dropdown">
                 <a href="aboutus.html">About</a>
                 <div class="dropdown-content">
+                    <a href="services.html">Services</a>
                     <a href="testimonials.html">Testimonials</a>
                     <a href="contactus.html">Contact Us</a>
                 </div>
@@ -49,12 +50,10 @@
 
     <!-- HERO SECTION -->
     <section class="grow-hero">
-        <h1>🌱 Grow Your Skills & Network</h1>
+        <h1>Grow Your Skills & Network</h1>
         <p>Discover opportunities to level up, connect with community members, and unlock your potential through events,
             workshops, conferences, and more.</p>
-        <a href="profile.html" class="cta-button"
-            style="background: var(--accent); color: white; border: none; display: inline-block; text-decoration: none; padding: 10px 30px; border-radius: 12px; transition: background 0.3s ease;">Create
-            Your Profile</a>
+        <a href="profile.html" class="hero-button">Create Your Profile</a>
     </section>
 
     <!-- MAIN CONTENT -->
@@ -247,6 +246,7 @@
         if (hamburger) {
             hamburger.addEventListener('click', () => {
                 navLinks.classList.toggle('mobile-open');
+                hamburger.classList.toggle('active');
             });
         }
     </script>

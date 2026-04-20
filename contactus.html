@@ -194,16 +194,20 @@
 
     <!-- NAV  -->
     <nav class="nav">
+        <div class="hamburger-menu" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <a href="index.html" class="logo">We The Village</a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="connect.html">Connect</a>
             <a href="grow.html">Grow</a>
             <a href="build.html">Build</a>
             <div class="nav-dropdown">
                 <a href="aboutus.html">About</a>
-                <div class="dropdown-content">
-                    <a href="testimonials.html">Testimonials</a>
+                <div class="dropdown-content">                    <a href="services.html">Services</a>                    <a href="testimonials.html">Testimonials</a>
                     <a href="contactus.html" class="active">Contact Us</a>
                 </div>
             </div>
@@ -212,6 +216,22 @@
             <a href="dashboard.html"><button class="login-btn">Dashboard</button></a>
         </div>
     </nav>
+
+    <style>
+        @media (max-width: 900px) {
+            #hamburger {
+                display: flex !important;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .nav-links.mobile-open {
+                display: flex !important;
+            }
+        }
+    </style>
 
     <!-- HERO SECTION -->
     <section class="contact-hero">
@@ -380,6 +400,17 @@
                 icon.textContent = item.classList.contains('active') ? '−' : '+';
             });
         });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-open');
+                hamburger.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 

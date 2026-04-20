@@ -29,9 +29,11 @@
             <a href="connect.html">Connect</a>
             <a href="grow.html">Grow</a>
             <a href="build.html" style="font-weight: bold; color: var(--accent);">Build</a>
+            <a href="services.html">Services</a>
             <div class="nav-dropdown">
                 <a href="aboutus.html">About</a>
                 <div class="dropdown-content">
+                    <a href="services.html">Services</a>
                     <a href="testimonials.html">Testimonials</a>
                     <a href="contactus.html">Contact Us</a>
                 </div>
@@ -51,12 +53,10 @@
 
     <!-- HERO SECTION -->
     <section class="build-hero">
-        <h1>🏗️ Build & Share with the Community</h1>
+        <h1>Build & Share with the Community</h1>
         <p>Create events, build experiences, and amplify your voice across our community platform and beyond through our
             integrated promotion tools.</p>
-        <a href="profile.html" class="cta-button"
-            style="background: var(--accent); color: white; border: none; display: inline-block; text-decoration: none; padding: 10px 30px; border-radius: 12px; transition: background 0.3s ease;">Create
-            an Event</a>
+        <button id="heroCreateEventBtn" class="hero-button">Create an Event</button>
     </section>
 
     <!-- MAIN CONTENT -->
@@ -262,212 +262,244 @@
             </div>
         </section>
 
-        <!-- EVENT CREATION FORM -->
-        <section class="build-section">
-            <div class="section-header">
-                <h2>Create Your Event</h2>
-                <p>Get started by filling out the form below</p>
-            </div>
-
-            <div class="event-creation-form">
-                <form id="eventForm">
-                    <!-- BASIC INFO -->
-                    <div class="form-section">
-                        <h3>📋 Basic Information</h3>
-
-                        <div class="form-group">
-                            <label>Event Title *</label>
-                            <input type="text" placeholder="e.g., Web Development Workshop for Beginners" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Event Description *</label>
-                            <textarea
-                                placeholder="Describe what your event is about, who should attend, and what they'll learn or gain..."
-                                required></textarea>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Event Category *</label>
-                                <select required>
-                                    <option value="">-- Select Category --</option>
-                                    <option value="skill-building">🎓 Skill Building</option>
-                                    <option value="conference">🎤 Conference / Talk</option>
-                                    <option value="networking">🤝 Networking</option>
-                                    <option value="volunteering">🙋 Volunteering</option>
-                                    <option value="project">👨‍💻 Project / Hackathon</option>
-                                    <option value="movement">✊ Movement / Cause</option>
-                                    <option value="city-event">🏙️ City Event</option>
-                                    <option value="other">💡 Other</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Event Type *</label>
-                                <select required>
-                                    <option value="">-- Select Type --</option>
-                                    <option value="in-person">🏢 In-Person</option>
-                                    <option value="online">💻 Online / Virtual</option>
-                                    <option value="hybrid">🔀 Hybrid</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DATE & TIME -->
-                    <div class="form-section">
-                        <h3>📅 Date & Time</h3>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Start Date *</label>
-                                <input type="date" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Start Time *</label>
-                                <input type="time" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>End Time *</label>
-                                <input type="time" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- LOCATION -->
-                    <div class="form-section">
-                        <h3>📍 Location</h3>
-
-                        <div class="form-group">
-                            <label>Location / Venue *</label>
-                            <input type="text" placeholder="Street address, venue name, or Zoom link for online events"
-                                required>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>City</label>
-                                <input type="text" placeholder="City, State" value="">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Capacity</label>
-                                <input type="number" placeholder="How many attendees can you accommodate?" min="1">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PROMOTION -->
-                    <div class="form-section">
-                        <h3>📢 Promotion Channels</h3>
-                        <p style="color: #666; margin-bottom: 15px;">Choose which channels we should promote your event
-                            on:</p>
-
-                        <div class="promotion-checklist">
-                            <label class="checklist-item">
-                                <input type="checkbox" checked>
-                                <span class="checklist-label">🌐 <strong>Our Website</strong> - Featured on Grow page &
-                                    calendar</span>
-                            </label>
-
-                            <label class="checklist-item">
-                                <input type="checkbox" checked>
-                                <span class="checklist-label">📧 <strong>Email Newsletter</strong> - Sent to targeted
-                                    subscribers</span>
-                            </label>
-
-                            <label class="checklist-item">
-                                <input type="checkbox" checked>
-                                <span class="checklist-label">📘 <strong>Facebook</strong> - Posted to our Facebook
-                                    community</span>
-                            </label>
-
-                            <label class="checklist-item">
-                                <input type="checkbox" checked>
-                                <span class="checklist-label">🐦 <strong>Twitter/X</strong> - Announced to our
-                                    followers</span>
-                            </label>
-
-                            <label class="checklist-item">
-                                <input type="checkbox" checked>
-                                <span class="checklist-label">📸 <strong>Instagram</strong> - Posted in stories and
-                                    feed</span>
-                            </label>
-
-                            <label class="checklist-item">
-                                <input type="checkbox">
-                                <span class="checklist-label">💼 <strong>LinkedIn</strong> - Shared with professional
-                                    network</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- ADDITIONAL INFO -->
-                    <div class="form-section">
-                        <h3>📝 Additional Details</h3>
-
-                        <div class="form-group">
-                            <label>Image URL (Hero Image)</label>
-                            <input type="url" placeholder="https://example.com/image.jpg">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Organizer Contact Email *</label>
-                            <input type="email" placeholder="your@email.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Any Special Notes or Requirements</label>
-                            <textarea placeholder="Accessibility needs, prerequisites, what to bring, etc."></textarea>
-                        </div>
-                    </div>
-
-                    <!-- ACTIONS -->
-                    <div class="form-actions">
-                        <button type="reset" class="btn-secondary">Clear Form</button>
-                        <button type="submit" class="btn-primary">✓ Create Event</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-
         <!-- CTA SECTION -->
         <section class="cta-section">
-            <h2>Ready to Build?</h2>
+            <h2>Ready to Create an Event?</h2>
             <p>
-                Have an event idea but need help organizing? Our community team can help you plan,
-                organize, and promote your event to make it a success. Let's build together.
+                Start building and sharing with your community today. Click below to create your event and make an impact.
             </p>
-            <a href="profile.html" class="cta-button"
-                style="background: var(--accent); color: white; border: none; display: inline-block; padding: 10px 30px; border-radius: 12px; text-decoration: none;">Get
-                Help Organizing</a>
+            <button id="openEventModal" class="cta-button"
+                style="background: var(--accent); color: white; border: none; display: inline-block; text-decoration: none; padding: 10px 30px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;">Create
+                Your Event</button>
+        </section>
+
+        <!-- SERVICES LINK SECTION -->
+        <section class="build-section" style="text-align: center; padding: 50px 30px; background: #f9f9f9; border-radius: 12px; margin-top: 40px;">
+            <h3 style="font-family: var(--font-heading); color: var(--primary); font-size: 1.4rem; margin-bottom: 15px;">Need Venues, Catering, or Support Services?</h3>
+            <p style="color: #666; margin-bottom: 20px; font-size: 1rem;">Explore our comprehensive Local Ecosystem Services to find venues, catering partners, learning opportunities, professional services, and transportation options for your events.</p>
+            <a href="services.html" class="cta-button" style="background: var(--secondary); color: white; border: none; display: inline-block; padding: 10px 30px; border-radius: 12px; text-decoration: none;">Explore Services</a>
         </section>
 
     </div>
 
+    <!-- EVENT CREATION MODAL -->
+    <div id="eventModal" class="event-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeEventModal">&times;</button>
+            <h2 style="font-family: var(--font-heading); color: var(--primary); margin-top: 0;">Create Your Event</h2>
+            <form id="eventForm">
+                <!-- BASIC INFO -->
+                <div class="form-section">
+                    <h3>📋 Basic Information</h3>
+
+                    <div class="form-group">
+                        <label>Event Title *</label>
+                        <input type="text" placeholder="e.g., Web Development Workshop for Beginners" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Event Description *</label>
+                        <textarea
+                            placeholder="Describe what your event is about, who should attend, and what they'll learn or gain..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Event Category *</label>
+                            <select required>
+                                <option value="">-- Select Category --</option>
+                                <option value="skill-building">🎓 Skill Building</option>
+                                <option value="conference">🎤 Conference / Talk</option>
+                                <option value="networking">🤝 Networking</option>
+                                <option value="volunteering">🙋 Volunteering</option>
+                                <option value="project">👨‍💻 Project / Hackathon</option>
+                                <option value="movement">✊ Movement / Cause</option>
+                                <option value="city-event">🏙️ City Event</option>
+                                <option value="other">💡 Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Event Type *</label>
+                            <select required>
+                                <option value="">-- Select Type --</option>
+                                <option value="in-person">🏢 In-Person</option>
+                                <option value="online">💻 Online / Virtual</option>
+                                <option value="hybrid">🔀 Hybrid</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DATE & TIME -->
+                <div class="form-section">
+                    <h3>📅 Date & Time</h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Start Date *</label>
+                            <input type="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Start Time *</label>
+                            <input type="time" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>End Time *</label>
+                            <input type="time" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOCATION -->
+                <div class="form-section">
+                    <h3>📍 Location</h3>
+
+                    <div class="form-group">
+                        <label>Location / Venue *</label>
+                        <input type="text" placeholder="Street address, venue name, or Zoom link for online events"
+                            required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" placeholder="City, State" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Capacity</label>
+                            <input type="number" placeholder="How many attendees can you accommodate?" min="1">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROMOTION -->
+                <div class="form-section">
+                    <h3>📢 Promotion Channels</h3>
+                    <p style="color: #666; margin-bottom: 15px;">Choose which channels we should promote your event on:</p>
+
+                    <div class="promotion-checklist">
+                        <label class="checklist-item">
+                            <input type="checkbox" checked>
+                            <span class="checklist-label">🌐 <strong>Our Website</strong> - Featured on Grow page & calendar</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox" checked>
+                            <span class="checklist-label">📧 <strong>Email Newsletter</strong> - Sent to targeted subscribers</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox" checked>
+                            <span class="checklist-label">📘 <strong>Facebook</strong> - Posted to our Facebook community</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox" checked>
+                            <span class="checklist-label">🐦 <strong>Twitter/X</strong> - Announced to our followers</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox" checked>
+                            <span class="checklist-label">📸 <strong>Instagram</strong> - Posted in stories and feed</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checklist-label">💼 <strong>LinkedIn</strong> - Shared with professional network</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- ADDITIONAL INFO -->
+                <div class="form-section">
+                    <h3>📝 Additional Details</h3>
+
+                    <div class="form-group">
+                        <label>Image URL (Hero Image)</label>
+                        <input type="url" placeholder="https://example.com/image.jpg">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Organizer Contact Email *</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Any Special Notes or Requirements</label>
+                        <textarea placeholder="Accessibility needs, prerequisites, what to bring, etc."></textarea>
+                    </div>
+                </div>
+
+                <!-- SUBSCRIPTION REQUIRED -->
+                <div class="form-section">
+                    <h3>📬 Subscribe to Platform</h3>
+                    <p style="color: #666; margin-bottom: 20px;">To submit your event, you must subscribe to receive updates about event responses and attendee engagement.</p>
+                    <label class="checklist-item" style="margin: 0;">
+                        <input type="checkbox" id="subscriptionCheckbox" required>
+                        <span class="checklist-label">✓ <strong>I agree to subscribe</strong> to event updates and community announcements</span>
+                    </label>
+                </div>
+
+                <!-- ACTIONS -->
+                <div class="form-actions">
+                    <button type="reset" class="btn-secondary">Clear Form</button>
+                    <button type="submit" class="btn-primary">✓ Create Event</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
+        // Modal handling
+        const eventModal = document.getElementById('eventModal');
+        const openEventModal = document.getElementById('openEventModal');
+        const heroCreateEventBtn = document.getElementById('heroCreateEventBtn');
+        const closeEventModal = document.getElementById('closeEventModal');
+
+        const openModal = () => {
+            eventModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        };
+
+        openEventModal?.addEventListener('click', openModal);
+        heroCreateEventBtn?.addEventListener('click', openModal);
+
+        closeEventModal?.addEventListener('click', () => {
+            eventModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === eventModal) {
+                eventModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
         // Form submission
         const eventForm = document.getElementById('eventForm');
         if (eventForm) {
             eventForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                alert('Thank you for creating an event! Our team will review it shortly and send you confirmation details.');
+                
+                const subscriptionCheckbox = document.getElementById('subscriptionCheckbox');
+                if (!subscriptionCheckbox?.checked) {
+                    alert('⚠️ You must agree to subscribe to submit your event.');
+                    return;
+                }
+                
+                alert('✅ Thank you for creating an event! We\'ve received your submission and you\'re now subscribed to updates. Our team will review it shortly and send you confirmation details.');
                 eventForm.reset();
+                eventModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
             });
         }
-
-        // CTA button
-        const ctaButtons = document.querySelectorAll('.build-hero .cta-button, .cta-section .cta-button');
-        ctaButtons.forEach(btn => {
-            btn.addEventListener('click', function () {
-                alert('To create events, please sign in or create an account with We The Village.');
-            });
-        });
-
-        // Toggle checkboxes on checklist
         const checklistItems = document.querySelectorAll('.checklist-item');
         checklistItems.forEach(item => {
             item.addEventListener('click', function (e) {
@@ -485,6 +517,7 @@
         if (hamburger) {
             hamburger.addEventListener('click', () => {
                 navLinks.classList.toggle('mobile-open');
+                hamburger.classList.toggle('active');
             });
         }
     </script>

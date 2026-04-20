@@ -12,6 +12,22 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="wtvstyle.css" />
+    
+    <style>
+        @media (max-width: 900px) {
+            #hamburger {
+                display: flex !important;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .nav-links.mobile-open {
+                display: flex !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -32,6 +48,7 @@
             <div class="nav-dropdown">
                 <a href="aboutus.html">About</a>
                 <div class="dropdown-content">
+                    <a href="services.html">Services</a>
                     <a href="testimonials.html">Testimonials</a>
                     <a href="contactus.html">Contact Us</a>
                 </div>
@@ -217,6 +234,19 @@
     <footer style="background: #111; color: white; padding: 60px 20px; text-align: center;">
         <p>&copy; 2024 We The Village. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-open');
+                hamburger.classList.toggle('active');
+            });
+        }
+    </script>
 
 </body>
 </html>
